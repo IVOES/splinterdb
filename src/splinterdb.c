@@ -450,7 +450,7 @@ splinterdb_open(splinterdb_config *cfg, // IN
  *      None.
  *-----------------------------------------------------------------------------
  */
-void
+int
 splinterdb_close(splinterdb **kvs_in) // IN
 {
    splinterdb *kvs = *kvs_in;
@@ -471,8 +471,14 @@ splinterdb_close(splinterdb **kvs_in) // IN
    // Free resources carefully to avoid ASAN-test failures
    platform_heap_handle heap_handle = kvs->heap_handle;
    platform_free(kvs->heap_id, kvs);
-   platform_heap_destroy(&heap_handle);
-   *kvs_in = (splinterdb *)NULL;
+   platform_status rc = platform_heap_destroy(&heap_handle);
+   *kvs_in            = (splinterdb *)NULL;
+
+   // Report any errors encountered while dismanting shared memory
+   // Usually, one might expect to find stray fragments lying around
+   // which were not freed at run-time. The shared-memory dismantling
+   // will check and report such violations.
+   return (SUCCESS(rc) ? 0 : 1);
 }
 
 
@@ -699,7 +705,8 @@ splinterdb_iterator_init(const splinterdb     *kvs,           // IN
    platform_status rc = trunk_range_iterator_init(
       kvs->spl, range_itor, start_key, POSITIVE_INFINITY_KEY, UINT64_MAX);
    if (!SUCCESS(rc)) {
-      platform_free(kvs->spl->heap_id, *iter);
+      // Backout: Release memory alloc'ed for iterator above.
+      platform_free(kvs->spl->heap_id, it);
       return platform_status_to_int(rc);
    }
    it->parent = kvs;
@@ -715,7 +722,7 @@ splinterdb_iterator_deinit(splinterdb_iterator *iter)
    trunk_range_iterator_deinit(range_itor);
 
    trunk_handle *spl = range_itor->spl;
-   platform_free(spl->heap_id, range_itor);
+   platform_free(spl->heap_id, iter);
 }
 
 _Bool

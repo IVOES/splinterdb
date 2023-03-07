@@ -84,13 +84,16 @@ platform_heap_create(platform_module_id    UNUSED_PARAM(module_id),
    return STATUS_OK;
 }
 
-void
+platform_status
 platform_heap_destroy(platform_heap_handle *heap_handle)
 {
    // If shared segment was allocated, it's being tracked thru heap handle.
    if (*heap_handle) {
+      // Percolate any errors discovered with orphaned free fragments that
+      // is recognized while shared memory is dismantled.
       return platform_shmdestroy(heap_handle);
    }
+   return STATUS_OK;
 }
 
 /*
@@ -395,12 +398,14 @@ platform_histo_create(platform_heap_id       heap_id,
                       const int64 *const     bucket_limits,
                       platform_histo_handle *histo)
 {
+   platform_memfrag      memfrag_hh;
    platform_histo_handle hh;
-   hh = TYPED_MANUAL_MALLOC(
+   hh = TYPED_ARRAY_MALLOC(
       heap_id, hh, sizeof(hh) + num_buckets * sizeof(hh->count[0]));
    if (!hh) {
       return STATUS_NO_MEMORY;
    }
+   hh->size          = memfrag_size(&memfrag_hh);
    hh->num_buckets   = num_buckets;
    hh->bucket_limits = bucket_limits;
    hh->total         = 0;
@@ -419,7 +424,12 @@ platform_histo_destroy(platform_heap_id       heap_id,
 {
    platform_assert(histo_out);
    platform_histo_handle histo = *histo_out;
-   platform_free(heap_id, histo);
+   // RESOLVE: This needs a test to see why it didn't trip asserts.
+   // platform_free(heap_id, histo);
+   platform_memfrag  memfrag;
+   platform_memfrag *mf = &memfrag;
+   memfrag_init_size(mf, histo, histo->size);
+   platform_free(heap_id, mf);
    *histo_out = NULL;
 }
 
