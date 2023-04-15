@@ -79,6 +79,30 @@ static bool Trace_large_frags  = FALSE;
  * NOTE: {to_pid, to_tid} and {by_pid, by_tid} fields go hand-in-hand.
  *       We track both for improved debugging.
  *
+ *
+ * Here is a pictorial showing how large-fragments are tracked
+
+     ┌──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┐
+    ┌┼┼┼│  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │
+    ├───┴─┬┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┘
+    │     │
+    │     │
+┌───▼─┐   │
+│     │   ▼                      ┌─────────────────────────┐
+│     │ ┌─────────┐              │ addr                    │
+│     │ │         │◄─────────────┼─                        │
+│     │ │         │              │ size = 32K              │
+│     │ │         │              │                         │
+└─────┘ │         │              │ allocated_to_tid = T1   │
+        │         │              │                         │
+        │         │              │ allocated_to_pid = PID1 │
+        │         │              │                         │
+        └─────────┘              │ freed_by_pid = 0        │
+                                 │                         │
+                                 │ freed_by_tid = 0        │
+                                 │                         │
+                                 └─────────────────────────┘
+
  * Lifecyle:
  *  - Initially all frag_addr will be NULL => tracking fragment is empty
  *  - When a large fragment is initially allocated, frag_addr / frag_size will
