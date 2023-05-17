@@ -9,13 +9,7 @@
 
 #pragma once
 
-#include "clockcache.h" // Nested #include's task.h and related tokens.
-#include "splinterdb/data.h"
-#include "io.h"
-#include "rc_allocator.h"
-#include "shard_log.h"
-#include "trunk.h"
-#include "util.h"
+#include "cache.h"
 
 extern const char *BUILD_VERSION;
 
