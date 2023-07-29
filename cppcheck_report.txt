@@ -1,0 +1,1199 @@
+examples/splinterdb_custom_ipv4_addr_sortcmp_example.c:341:65: warning: Possible null pointer dereference: from_key [nullPointer]
+   printf("Iterate through all the keys starting from '%s':\n", from_key);
+                                                                ^
+examples/splinterdb_custom_ipv4_addr_sortcmp_example.c:167:32: note: Calling function 'do_iterate_from', 2nd argument 'NULL' value is 0
+   do_iterate_from(spl_handle, NULL);
+                               ^
+examples/splinterdb_custom_ipv4_addr_sortcmp_example.c:341:65: note: Null pointer dereference
+   printf("Iterate through all the keys starting from '%s':\n", from_key);
+                                                                ^
+examples/splinterdb_custom_ipv4_addr_sortcmp_example.c:358:7: style: Redundant initialization for 'rc'. The initialized value is overwritten before it is read. [redundantInitialization]
+   rc = splinterdb_iterator_status(it);
+      ^
+examples/splinterdb_custom_ipv4_addr_sortcmp_example.c:348:11: note: rc is initialized
+   int rc = splinterdb_iterator_init(spl_handle, &it, start_key);
+          ^
+examples/splinterdb_custom_ipv4_addr_sortcmp_example.c:358:7: note: rc is overwritten
+   rc = splinterdb_iterator_status(it);
+      ^
+examples/splinterdb_intro_example.c:56:7: style: Redundant initialization for 'rc'. The initialized value is overwritten before it is read. [redundantInitialization]
+   rc = splinterdb_insert(spl_handle, key, value);
+      ^
+examples/splinterdb_intro_example.c:47:11: note: rc is initialized
+   int rc = splinterdb_create(&splinterdb_cfg, &spl_handle);
+          ^
+examples/splinterdb_intro_example.c:56:7: note: rc is overwritten
+   rc = splinterdb_insert(spl_handle, key, value);
+      ^
+examples/splinterdb_intro_example.c:63:10: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+   rc    = splinterdb_insert(spl_handle, key, value);
+         ^
+examples/splinterdb_intro_example.c:56:7: note: rc is assigned
+   rc = splinterdb_insert(spl_handle, key, value);
+      ^
+examples/splinterdb_intro_example.c:63:10: note: rc is overwritten
+   rc    = splinterdb_insert(spl_handle, key, value);
+         ^
+examples/splinterdb_intro_example.c:70:10: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+   rc    = splinterdb_insert(spl_handle, key, value);
+         ^
+examples/splinterdb_intro_example.c:63:10: note: rc is assigned
+   rc    = splinterdb_insert(spl_handle, key, value);
+         ^
+examples/splinterdb_intro_example.c:70:10: note: rc is overwritten
+   rc    = splinterdb_insert(spl_handle, key, value);
+         ^
+examples/splinterdb_intro_example.c:79:10: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+   rc    = splinterdb_lookup(spl_handle, key, &result);
+         ^
+examples/splinterdb_intro_example.c:70:10: note: rc is assigned
+   rc    = splinterdb_insert(spl_handle, key, value);
+         ^
+examples/splinterdb_intro_example.c:79:10: note: rc is overwritten
+   rc    = splinterdb_lookup(spl_handle, key, &result);
+         ^
+examples/splinterdb_intro_example.c:80:10: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+   rc    = splinterdb_lookup_result_value(&result, &value);
+         ^
+examples/splinterdb_intro_example.c:79:10: note: rc is assigned
+   rc    = splinterdb_lookup(spl_handle, key, &result);
+         ^
+examples/splinterdb_intro_example.c:80:10: note: rc is overwritten
+   rc    = splinterdb_lookup_result_value(&result, &value);
+         ^
+examples/splinterdb_intro_example.c:92:10: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+   rc    = splinterdb_lookup_result_value(&result, &value);
+         ^
+examples/splinterdb_intro_example.c:91:10: note: rc is assigned
+   rc    = splinterdb_lookup(spl_handle, key, &result);
+         ^
+examples/splinterdb_intro_example.c:92:10: note: rc is overwritten
+   rc    = splinterdb_lookup_result_value(&result, &value);
+         ^
+examples/splinterdb_intro_example.c:128:7: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+   rc = splinterdb_iterator_status(it);
+      ^
+examples/splinterdb_intro_example.c:114:7: note: rc is assigned
+   rc = splinterdb_iterator_init(spl_handle, &it, NULL_SLICE);
+      ^
+examples/splinterdb_intro_example.c:128:7: note: rc is overwritten
+   rc = splinterdb_iterator_status(it);
+      ^
+examples/splinterdb_intro_example.c:118:13: style: Local variable 'key' shadows outer variable [shadowVariable]
+      slice key, value;
+            ^
+examples/splinterdb_intro_example.c:53:16: note: Shadowed declaration
+   slice       key   = slice_create((size_t)strlen(fruit), fruit);
+               ^
+examples/splinterdb_intro_example.c:118:13: note: Shadow variable
+      slice key, value;
+            ^
+examples/splinterdb_intro_example.c:118:18: style: Local variable 'value' shadows outer variable [shadowVariable]
+      slice key, value;
+                 ^
+examples/splinterdb_intro_example.c:54:16: note: Shadowed declaration
+   slice       value = slice_create((size_t)strlen(descr), descr);
+               ^
+examples/splinterdb_intro_example.c:118:18: note: Shadow variable
+      slice key, value;
+                 ^
+examples/splinterdb_iterators_example.c:140:65: warning: Possible null pointer dereference: from_key [nullPointer]
+   printf("Iterate through all the keys starting from '%s':\n", from_key);
+                                                                ^
+examples/splinterdb_iterators_example.c:87:32: note: Calling function 'do_iterate_from', 2nd argument 'NULL' value is 0
+   do_iterate_from(spl_handle, NULL);
+                               ^
+examples/splinterdb_iterators_example.c:140:65: note: Null pointer dereference
+   printf("Iterate through all the keys starting from '%s':\n", from_key);
+                                                                ^
+examples/splinterdb_iterators_example.c:163:7: style: Redundant initialization for 'rc'. The initialized value is overwritten before it is read. [redundantInitialization]
+   rc = splinterdb_iterator_status(it);
+      ^
+examples/splinterdb_iterators_example.c:148:11: note: rc is initialized
+   int rc = splinterdb_iterator_init(spl_handle, &it, start_key);
+          ^
+examples/splinterdb_iterators_example.c:163:7: note: rc is overwritten
+   rc = splinterdb_iterator_status(it);
+      ^
+examples/splinterdb_wide_values_example.c:79:4: portability: %lu in format string (no. 1) requires 'unsigned long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+   printf("Retrieve values of different lengths using output buffer of"
+   ^
+examples/splinterdb_wide_values_example.c:96:10: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+      rc = splinterdb_lookup_result_value(&result, &value);
+         ^
+examples/splinterdb_wide_values_example.c:93:17: note: rc is assigned
+      rc        = splinterdb_lookup(spl_handle, key, &result);
+                ^
+examples/splinterdb_wide_values_example.c:96:10: note: rc is overwritten
+      rc = splinterdb_lookup_result_value(&result, &value);
+         ^
+examples/splinterdb_wide_values_example.c:88:12: style: Local variable 'key_buf' shadows outer variable [shadowVariable]
+      char key_buf[USER_MAX_KEY_SIZE];
+           ^
+examples/splinterdb_wide_values_example.c:52:9: note: Shadowed declaration
+   char key_buf[USER_MAX_KEY_SIZE];
+        ^
+examples/splinterdb_wide_values_example.c:88:12: note: Shadow variable
+      char key_buf[USER_MAX_KEY_SIZE];
+           ^
+src/PackedArray.c:284:12: style: Variable 'packed' is reassigned a value before the old one has been used. [redundantAssignment]
+    packed = *++in;
+           ^
+src/PackedArray.c:274:16: note: packed is assigned
+        packed = *++in;
+               ^
+src/PackedArray.c:284:12: note: packed is overwritten
+    packed = *++in;
+           ^
+src/btree_private.h:270:32: warning: Either the condition 'child_idx<0' is redundant or the array 'hdr->offsets[0]' is accessed at index -1, which is out of bounds. [negativeIndex]
+                <= hdr->offsets[k]);
+                               ^
+src/btree.c:1734:18: note: Assuming that condition 'child_idx<0' is not redundant
+   if (child_idx < 0 || btree_index_is_full(cfg, root_node.hdr)) {
+                 ^
+src/btree.c:1771:61: note: Calling function 'btree_get_index_entry', 3rd argument 'child_idx' value is -1
+   parent_entry = btree_get_index_entry(cfg, root_node.hdr, child_idx);
+                                                            ^
+src/btree_private.h:270:32: note: Negative array index
+                <= hdr->offsets[k]);
+                               ^
+src/btree_private.h:271:29: warning: Either the condition 'child_idx<0' is redundant or the array 'hdr->offsets[0]' is accessed at index -1, which is out of bounds. [negativeIndex]
+   debug_assert(hdr->offsets[k] + sizeof(index_entry) <= btree_page_size(cfg),
+                            ^
+src/btree.c:1734:18: note: Assuming that condition 'child_idx<0' is not redundant
+   if (child_idx < 0 || btree_index_is_full(cfg, root_node.hdr)) {
+                 ^
+src/btree.c:1771:61: note: Calling function 'btree_get_index_entry', 3rd argument 'child_idx' value is -1
+   parent_entry = btree_get_index_entry(cfg, root_node.hdr, child_idx);
+                                                            ^
+src/btree_private.h:271:29: note: Negative array index
+   debug_assert(hdr->offsets[k] + sizeof(index_entry) <= btree_page_size(cfg),
+                            ^
+src/btree_private.h:275:29: warning:inconclusive: Either the condition 'child_idx<0' is redundant or the array 'hdr->offsets[0]' is accessed at index -1, which is out of bounds. [negativeIndex]
+                hdr->offsets[k],
+                            ^
+src/btree.c:1734:18: note: Assuming that condition 'child_idx<0' is not redundant
+   if (child_idx < 0 || btree_index_is_full(cfg, root_node.hdr)) {
+                 ^
+src/btree.c:1771:61: note: Calling function 'btree_get_index_entry', 3rd argument 'child_idx' value is -1
+   parent_entry = btree_get_index_entry(cfg, root_node.hdr, child_idx);
+                                                            ^
+src/btree_private.h:275:29: note: Negative array index
+                hdr->offsets[k],
+                            ^
+src/btree.c:543:59: style:inconclusive: Function 'btree_create_leaf_incorporate_spec' argument 5 names different: declaration 'message' definition 'msg'. [funcArgNamesDifferent]
+                                   message                msg,
+                                                          ^
+src/btree_private.h:82:59: note: Function 'btree_create_leaf_incorporate_spec' argument 5 names different: declaration 'message' definition 'msg'.
+                                   message                message,
+                                                          ^
+src/btree.c:543:59: note: Function 'btree_create_leaf_incorporate_spec' argument 5 names different: declaration 'message' definition 'msg'.
+                                   message                msg,
+                                                          ^
+src/btree.c:1673:34: style:inconclusive: Function 'btree_insert' argument 8 names different: declaration 'data' definition 'msg'. [funcArgNamesDifferent]
+             message             msg,        // IN
+                                 ^
+src/btree.h:211:34: note: Function 'btree_insert' argument 8 names different: declaration 'data' definition 'msg'.
+             message             data,       // IN
+                                 ^
+src/btree.c:1673:34: note: Function 'btree_insert' argument 8 names different: declaration 'data' definition 'msg'.
+             message             msg,        // IN
+                                 ^
+src/btree.c:2609:37: style:inconclusive: Function 'btree_iterator_init' argument 3 names different: declaration 'iterator' definition 'itor'. [funcArgNamesDifferent]
+                    btree_iterator *itor,
+                                    ^
+src/btree.h:315:37: note: Function 'btree_iterator_init' argument 3 names different: declaration 'iterator' definition 'itor'.
+                    btree_iterator *iterator,
+                                    ^
+src/btree.c:2609:37: note: Function 'btree_iterator_init' argument 3 names different: declaration 'iterator' definition 'itor'.
+                    btree_iterator *itor,
+                                    ^
+src/btree.c:3357:48: style:inconclusive: Function 'btree_print_memtable_tree' argument 4 names different: declaration 'addr' definition 'root_addr'. [funcArgNamesDifferent]
+                          uint64               root_addr)
+                                               ^
+src/btree.h:387:48: note: Function 'btree_print_memtable_tree' argument 4 names different: declaration 'addr' definition 'root_addr'.
+                          uint64               addr);
+                                               ^
+src/btree.c:3357:48: note: Function 'btree_print_memtable_tree' argument 4 names different: declaration 'addr' definition 'root_addr'.
+                          uint64               root_addr)
+                                               ^
+src/btree.c:3371:39: style:inconclusive: Function 'btree_print_tree' argument 4 names different: declaration 'addr' definition 'root_addr'. [funcArgNamesDifferent]
+                 uint64               root_addr,
+                                      ^
+src/btree.h:393:39: note: Function 'btree_print_tree' argument 4 names different: declaration 'addr' definition 'root_addr'.
+                 uint64               addr,
+                                      ^
+src/btree.c:3371:39: note: Function 'btree_print_tree' argument 4 names different: declaration 'addr' definition 'root_addr'.
+                 uint64               root_addr,
+                                      ^
+src/clockcache.c:3134:50: error: There is an unknown macro here somewhere. Configuration is required. If FRACTION_FMT is a macro then please configure it. [unknownMacro]
+   platform_log(log_handle, "cache miss time | " FRACTION_FMT(9, 2)"s | "
+                                                 ^
+src/memtable.c:29:37: style:inconclusive: Function 'memtable_is_empty' argument 1 names different: declaration 'mt_ctxt' definition 'ctxt'. [funcArgNamesDifferent]
+memtable_is_empty(memtable_context *ctxt)
+                                    ^
+src/memtable.h:278:37: note: Function 'memtable_is_empty' argument 1 names different: declaration 'mt_ctxt' definition 'ctxt'.
+memtable_is_empty(memtable_context *mt_ctxt);
+                                    ^
+src/memtable.c:29:37: note: Function 'memtable_is_empty' argument 1 names different: declaration 'mt_ctxt' definition 'ctxt'.
+memtable_is_empty(memtable_context *ctxt)
+                                    ^
+src/memtable.c:217:35: style:inconclusive: Function 'memtable_insert' argument 6 names different: declaration 'generation' definition 'leaf_generation'. [funcArgNamesDifferent]
+                uint64           *leaf_generation)
+                                  ^
+src/memtable.h:167:35: note: Function 'memtable_insert' argument 6 names different: declaration 'generation' definition 'leaf_generation'.
+                uint64           *generation);
+                                  ^
+src/memtable.c:217:35: note: Function 'memtable_insert' argument 6 names different: declaration 'generation' definition 'leaf_generation'.
+                uint64           *leaf_generation)
+                                  ^
+src/merge.c:99:31: style:inconclusive: Boolean expression 'cmp<0' is used in bitwise operation. Did you mean '&&'? [bitwiseOnBoolean]
+      next_equal |= (cmp < 0) & keys_equal;
+                              ^
+src/merge.c:214:33: warning: Either the condition 'index!=0' is redundant or the array 'merge_itor->ordered_iterators[1024]' is accessed at index -1, which is out of bounds. [negativeIndex]
+   merge_itor->ordered_iterators[index - 1]->next_key_equal = prev_equal;
+                                ^
+src/merge.c:200:14: note: Assuming that condition 'index!=0' is not redundant
+   if (index != 0) {
+             ^
+src/merge.c:214:33: note: Negative array index
+   merge_itor->ordered_iterators[index - 1]->next_key_equal = prev_equal;
+                                ^
+src/merge.c:445:42: error: Array 'merge_itor->ordered_iterator_stored[1024]' accessed at index -1, which is out of bounds. [negativeIndex]
+      merge_itor->ordered_iterator_stored[i] = (ordered_iterator){
+                                         ^
+src/merge.c:452:36: error: Array 'merge_itor->ordered_iterators[1024]' accessed at index -1, which is out of bounds. [negativeIndex]
+      merge_itor->ordered_iterators[i] =
+                                   ^
+src/merge.c:453:46: error: Array 'merge_itor->ordered_iterator_stored[1024]' accessed at index -1, which is out of bounds. [negativeIndex]
+         &merge_itor->ordered_iterator_stored[i];
+                                             ^
+src/merge.c:409:35: error: Uninitialized variable: merge_itor [uninitvar]
+       || num_trees >= ARRAY_SIZE(merge_itor->ordered_iterator_stored))
+                                  ^
+src/merge.c:420:30: error: Uninitialized variable: merge_itor [uninitvar]
+   _Static_assert(ARRAY_SIZE(merge_itor->ordered_iterator_stored)
+                             ^
+src/merge.c:409:8: note: Assuming condition is false
+       || num_trees >= ARRAY_SIZE(merge_itor->ordered_iterator_stored))
+       ^
+src/merge.c:420:30: note: Uninitialized variable: merge_itor
+   _Static_assert(ARRAY_SIZE(merge_itor->ordered_iterator_stored)
+                             ^
+src/merge.c:421:36: error: Uninitialized variable: merge_itor [uninitvar]
+                     == ARRAY_SIZE(merge_itor->ordered_iterators),
+                                   ^
+src/merge.c:409:8: note: Assuming condition is false
+       || num_trees >= ARRAY_SIZE(merge_itor->ordered_iterator_stored))
+       ^
+src/merge.c:421:36: note: Uninitialized variable: merge_itor
+                     == ARRAY_SIZE(merge_itor->ordered_iterators),
+                                   ^
+src/merge.c:606:31: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+   platform_status rc         = STATUS_OK;
+                              ^
+src/mini_allocator.c:899:4: error: There is an unknown macro here somewhere. Configuration is required. If debug_code is a macro then please configure it. [unknownMacro]
+   debug_code(if (!did_work) { mini_keyed_print(cc, cfg, meta_head, type); });
+   ^
+src/platform_linux/platform_types.h:95:1: error: syntax error: keyword 'while' is not allowed in global scope [syntaxError]
+_Static_assert(sizeof(platform_batch_rwlock)
+^
+src/rc_allocator.c:570:47: style:inconclusive: Function 'rc_allocator_get_super_addr' argument 2 names different: declaration 'spl_id' definition 'allocator_root_id'. [funcArgNamesDifferent]
+                            allocator_root_id allocator_root_id,
+                                              ^
+src/rc_allocator.c:97:47: note: Function 'rc_allocator_get_super_addr' argument 2 names different: declaration 'spl_id' definition 'allocator_root_id'.
+                            allocator_root_id spl_id,
+                                              ^
+src/rc_allocator.c:570:47: note: Function 'rc_allocator_get_super_addr' argument 2 names different: declaration 'spl_id' definition 'allocator_root_id'.
+                            allocator_root_id allocator_root_id,
+                                              ^
+src/rc_allocator.c:591:49: style:inconclusive: Function 'rc_allocator_alloc_super_addr' argument 2 names different: declaration 'spl_id' definition 'allocator_root_id'. [funcArgNamesDifferent]
+                              allocator_root_id allocator_root_id,
+                                                ^
+src/rc_allocator.c:111:49: note: Function 'rc_allocator_alloc_super_addr' argument 2 names different: declaration 'spl_id' definition 'allocator_root_id'.
+                              allocator_root_id spl_id,
+                                                ^
+src/rc_allocator.c:591:49: note: Function 'rc_allocator_alloc_super_addr' argument 2 names different: declaration 'spl_id' definition 'allocator_root_id'.
+                              allocator_root_id allocator_root_id,
+                                                ^
+src/rc_allocator.c:622:50: style:inconclusive: Function 'rc_allocator_remove_super_addr' argument 2 names different: declaration 'spl_id' definition 'allocator_root_id'. [funcArgNamesDifferent]
+                               allocator_root_id allocator_root_id)
+                                                 ^
+src/rc_allocator.c:124:68: note: Function 'rc_allocator_remove_super_addr' argument 2 names different: declaration 'spl_id' definition 'allocator_root_id'.
+rc_allocator_remove_super_addr(rc_allocator *al, allocator_root_id spl_id);
+                                                                   ^
+src/rc_allocator.c:622:50: note: Function 'rc_allocator_remove_super_addr' argument 2 names different: declaration 'spl_id' definition 'allocator_root_id'.
+                               allocator_root_id allocator_root_id)
+                                                 ^
+src/routing_filter.c:82:27: warning: The address of local variable 'u' might be accessed at non-zero index. [objectIndex]
+         c = ((uint8 *)&u)[j];
+                          ^
+src/routing_filter.c:82:24: note: Address of variable taken here.
+         c = ((uint8 *)&u)[j];
+                       ^
+src/routing_filter.c:82:27: note: The address of local variable 'u' might be accessed at non-zero index.
+         c = ((uint8 *)&u)[j];
+                          ^
+src/routing_filter.c:103:27: warning: The address of local variable 'u' might be accessed at non-zero index. [objectIndex]
+         c = ((uint8 *)&u)[j + fpshift];
+                          ^
+src/routing_filter.c:103:24: note: Address of variable taken here.
+         c = ((uint8 *)&u)[j + fpshift];
+                       ^
+src/routing_filter.c:103:27: note: The address of local variable 'u' might be accessed at non-zero index.
+         c = ((uint8 *)&u)[j + fpshift];
+                          ^
+src/routing_filter.c:327:37: style:inconclusive: Function 'routing_filter_add' argument 7 names different: declaration 'num_new_fingerprints' definition 'num_new_fp'. [funcArgNamesDifferent]
+                   uint64           num_new_fp,
+                                    ^
+src/routing_filter.h:99:37: note: Function 'routing_filter_add' argument 7 names different: declaration 'num_new_fingerprints' definition 'num_new_fp'.
+                   uint64           num_new_fingerprints,
+                                    ^
+src/routing_filter.c:327:37: note: Function 'routing_filter_add' argument 7 names different: declaration 'num_new_fingerprints' definition 'num_new_fp'.
+                   uint64           num_new_fp,
+                                    ^
+src/routing_filter.c:75:22: style: Local variable 'j' shadows outer variable [shadowVariable]
+      for (ptrdiff_t j = 0; j < MATRIX_COLS; j++) {
+                     ^
+src/routing_filter.c:62:15: note: Shadowed declaration
+   uint32  i, j, m, n;
+              ^
+src/routing_filter.c:75:22: note: Shadow variable
+      for (ptrdiff_t j = 0; j < MATRIX_COLS; j++) {
+                     ^
+src/routing_filter.c:744:31: style: Local variable 'i' shadows outer variable [shadowVariable]
+                  for (uint32 i = 0; i < count[bucket_off]; i++) {
+                              ^
+src/routing_filter.c:693:16: note: Shadowed declaration
+   for (uint64 i = 0; i != num_filters; i++) {
+               ^
+src/routing_filter.c:744:31: note: Shadow variable
+                  for (uint32 i = 0; i < count[bucket_off]; i++) {
+                              ^
+src/routing_filter.c:225:25: style: Variable 'bucket_pop' is assigned a value that is never used. [unreadVariable]
+   uint64 bucket_pop    = 0;
+                        ^
+src/routing_filter.c:333:40: style: Variable 'old_log_num_buckets' is assigned a value that is never used. [unreadVariable]
+   uint32 old_log_num_buckets          = 0;
+                                       ^
+src/routing_filter.c:335:40: style: Variable 'old_remainder_size' is assigned a value that is never used. [unreadVariable]
+   uint32 old_remainder_size           = 0;
+                                       ^
+src/shard_log.c:213:29: style:inconclusive: Function 'shard_log_write' argument 1 names different: declaration 'log' definition 'logh'. [funcArgNamesDifferent]
+shard_log_write(log_handle *logh, key tuple_key, message msg, uint64 generation)
+                            ^
+src/shard_log.c:25:29: note: Function 'shard_log_write' argument 1 names different: declaration 'log' definition 'logh'.
+shard_log_write(log_handle *log, key tuple_key, message msg, uint64 generation);
+                            ^
+src/shard_log.c:213:29: note: Function 'shard_log_write' argument 1 names different: declaration 'log' definition 'logh'.
+shard_log_write(log_handle *logh, key tuple_key, message msg, uint64 generation)
+                            ^
+src/shard_log.c:278:28: style:inconclusive: Function 'shard_log_addr' argument 1 names different: declaration 'log' definition 'logh'. [funcArgNamesDifferent]
+shard_log_addr(log_handle *logh)
+                           ^
+src/shard_log.c:27:28: note: Function 'shard_log_addr' argument 1 names different: declaration 'log' definition 'logh'.
+shard_log_addr(log_handle *log);
+                           ^
+src/shard_log.c:278:28: note: Function 'shard_log_addr' argument 1 names different: declaration 'log' definition 'logh'.
+shard_log_addr(log_handle *logh)
+                           ^
+src/shard_log.c:285:33: style:inconclusive: Function 'shard_log_meta_addr' argument 1 names different: declaration 'log' definition 'logh'. [funcArgNamesDifferent]
+shard_log_meta_addr(log_handle *logh)
+                                ^
+src/shard_log.c:29:33: note: Function 'shard_log_meta_addr' argument 1 names different: declaration 'log' definition 'logh'.
+shard_log_meta_addr(log_handle *log);
+                                ^
+src/shard_log.c:285:33: note: Function 'shard_log_meta_addr' argument 1 names different: declaration 'log' definition 'logh'.
+shard_log_meta_addr(log_handle *logh)
+                                ^
+src/shard_log.c:292:29: style:inconclusive: Function 'shard_log_magic' argument 1 names different: declaration 'log' definition 'logh'. [funcArgNamesDifferent]
+shard_log_magic(log_handle *logh)
+                            ^
+src/shard_log.c:31:29: note: Function 'shard_log_magic' argument 1 names different: declaration 'log' definition 'logh'.
+shard_log_magic(log_handle *log);
+                            ^
+src/shard_log.c:292:29: note: Function 'shard_log_magic' argument 1 names different: declaration 'log' definition 'logh'.
+shard_log_magic(log_handle *logh)
+                            ^
+src/shard_log.c:323:35: style:inconclusive: Function 'log_create' argument 2 names different: declaration 'cfg' definition 'lcfg'. [funcArgNamesDifferent]
+log_create(cache *cc, log_config *lcfg, platform_heap_id hid)
+                                  ^
+src/log.h:73:35: note: Function 'log_create' argument 2 names different: declaration 'cfg' definition 'lcfg'.
+log_create(cache *cc, log_config *cfg, platform_heap_id hid);
+                                  ^
+src/shard_log.c:323:35: note: Function 'log_create' argument 2 names different: declaration 'cfg' definition 'lcfg'.
+log_create(cache *cc, log_config *lcfg, platform_heap_id hid)
+                                  ^
+src/shard_log.c:431:39: style:inconclusive: Function 'shard_log_iterator_get_curr' argument 1 names different: declaration 'itor' definition 'itorh'. [funcArgNamesDifferent]
+shard_log_iterator_get_curr(iterator *itorh, key *curr_key, message *msg)
+                                      ^
+src/shard_log.c:41:39: note: Function 'shard_log_iterator_get_curr' argument 1 names different: declaration 'itor' definition 'itorh'.
+shard_log_iterator_get_curr(iterator *itor, key *curr_key, message *msg);
+                                      ^
+src/shard_log.c:431:39: note: Function 'shard_log_iterator_get_curr' argument 1 names different: declaration 'itor' definition 'itorh'.
+shard_log_iterator_get_curr(iterator *itorh, key *curr_key, message *msg)
+                                      ^
+src/shard_log.c:439:37: style:inconclusive: Function 'shard_log_iterator_at_end' argument 1 names different: declaration 'itor' definition 'itorh'. [funcArgNamesDifferent]
+shard_log_iterator_at_end(iterator *itorh, bool *at_end)
+                                    ^
+src/shard_log.c:43:37: note: Function 'shard_log_iterator_at_end' argument 1 names different: declaration 'itor' definition 'itorh'.
+shard_log_iterator_at_end(iterator *itor, bool *at_end);
+                                    ^
+src/shard_log.c:439:37: note: Function 'shard_log_iterator_at_end' argument 1 names different: declaration 'itor' definition 'itorh'.
+shard_log_iterator_at_end(iterator *itorh, bool *at_end)
+                                    ^
+src/shard_log.c:448:38: style:inconclusive: Function 'shard_log_iterator_advance' argument 1 names different: declaration 'itor' definition 'itorh'. [funcArgNamesDifferent]
+shard_log_iterator_advance(iterator *itorh)
+                                     ^
+src/shard_log.c:45:38: note: Function 'shard_log_iterator_advance' argument 1 names different: declaration 'itor' definition 'itorh'.
+shard_log_iterator_advance(iterator *itor);
+                                     ^
+src/shard_log.c:448:38: note: Function 'shard_log_iterator_advance' argument 1 names different: declaration 'itor' definition 'itorh'.
+shard_log_iterator_advance(iterator *itorh)
+                                     ^
+src/srq.h:256:4: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+   platform_mutex_lock(&queue->mutex);
+   ^
+src/task.c:821:45: style:inconclusive: Function 'task_system_config_init' argument 3 names different: declaration 'num_background_threads' definition 'num_bg_threads'. [funcArgNamesDifferent]
+                        const uint64        num_bg_threads[NUM_TASK_TYPES],
+                                            ^
+src/task.h:88:38: note: Function 'task_system_config_init' argument 3 names different: declaration 'num_background_threads' definition 'num_bg_threads'.
+                        const uint64 num_background_threads[NUM_TASK_TYPES],
+                                     ^
+src/task.c:821:45: note: Function 'task_system_config_init' argument 3 names different: declaration 'num_background_threads' definition 'num_bg_threads'.
+                        const uint64        num_bg_threads[NUM_TASK_TYPES],
+                                            ^
+src/task.c:911:57: style:inconclusive: Function 'task_system_destroy' argument 2 names different: declaration 'ts' definition 'ts_in'. [funcArgNamesDifferent]
+task_system_destroy(platform_heap_id hid, task_system **ts_in)
+                                                        ^
+src/task.h:191:57: note: Function 'task_system_destroy' argument 2 names different: declaration 'ts' definition 'ts_in'.
+task_system_destroy(platform_heap_id hid, task_system **ts);
+                                                        ^
+src/task.c:911:57: note: Function 'task_system_destroy' argument 2 names different: declaration 'ts' definition 'ts_in'.
+task_system_destroy(platform_heap_id hid, task_system **ts_in)
+                                                        ^
+src/task.c:876:23: style: Local variable 'rc' shadows outer variable [shadowVariable]
+      platform_status rc = task_group_init(&ts->group[type],
+                      ^
+src/task.c:853:20: note: Shadowed declaration
+   platform_status rc = task_config_valid(cfg->num_background_threads);
+                   ^
+src/task.c:876:23: note: Shadow variable
+      platform_status rc = task_group_init(&ts->group[type],
+                      ^
+src/trunk.c:8861:41: error: There is an unknown macro here somewhere. Configuration is required. If FRACTION_FMT is a macro then please configure it. [unknownMacro]
+   platform_log(log_handle, "| %11lu | "FRACTION_FMT(18, 2)" | %19lu | %19lu | %13lu | %13lu | %13lu |\n",
+                                        ^
+src/util.c:410:7: portability: %ld in format string (no. 1) requires 'long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+      snprintf(outbuf, outbuflen, "~%ld.%02ld %s", unit_val, frac_val, units);
+      ^
+src/util.c:410:7: portability: %ld in format string (no. 2) requires 'long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+      snprintf(outbuf, outbuflen, "~%ld.%02ld %s", unit_val, frac_val, units);
+      ^
+src/util.c:412:7: portability: %ld in format string (no. 1) requires 'long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+      snprintf(outbuf, outbuflen, "%ld %s", unit_val, units);
+      ^
+tests/functional/avlTree.c:402:17: style: Variable 'succ' is reassigned a value before the old one has been used. [redundantAssignment]
+      for (succ = r; succ->left != NULL; succ = succ->left)
+                ^
+tests/functional/avlTree.c:401:12: note: succ is assigned
+      succ = r;
+           ^
+tests/functional/avlTree.c:402:17: note: succ is overwritten
+      for (succ = r; succ->left != NULL; succ = succ->left)
+                ^
+tests/functional/btree_test.c:850:16: warning: The address of local variable 'root_addr' might be accessed at non-zero index. [objectIndex]
+      root_addr[tree_no] = req.root_addr;
+               ^
+tests/functional/btree_test.c:1143:52: note: Address of variable taken here.
+   test_btree_create_packed_trees(cc, cfg, hid, 1, &root_addr);
+                                                   ^
+tests/functional/btree_test.c:1143:52: note: Calling function 'test_btree_create_packed_trees', 5th argument '&root_addr' value is lifetime=root_addr
+   test_btree_create_packed_trees(cc, cfg, hid, 1, &root_addr);
+                                                   ^
+tests/functional/btree_test.c:850:16: note: The address of local variable 'root_addr' might be accessed at non-zero index.
+      root_addr[tree_no] = req.root_addr;
+               ^
+tests/functional/btree_test.c:594:15: style: Local variable 'correct' shadows outer variable [shadowVariable]
+         bool correct =
+              ^
+tests/functional/btree_test.c:578:9: note: Shadowed declaration
+   bool correct = memtable_verify(cc, mt);
+        ^
+tests/functional/btree_test.c:594:15: note: Shadow variable
+         bool correct =
+              ^
+tests/functional/btree_test.c:609:15: style: Local variable 'correct' shadows outer variable [shadowVariable]
+         bool correct;
+              ^
+tests/functional/btree_test.c:578:9: note: Shadowed declaration
+   bool correct = memtable_verify(cc, mt);
+        ^
+tests/functional/btree_test.c:609:15: note: Shadow variable
+         bool correct;
+              ^
+tests/functional/btree_test.c:639:12: style: Local variable 'correct' shadows outer variable [shadowVariable]
+      bool correct =
+           ^
+tests/functional/btree_test.c:578:9: note: Shadowed declaration
+   bool correct = memtable_verify(cc, mt);
+        ^
+tests/functional/btree_test.c:639:12: note: Shadow variable
+      bool correct =
+           ^
+tests/functional/btree_test.c:696:15: style: Local variable 'correct' shadows outer variable [shadowVariable]
+         bool correct =
+              ^
+tests/functional/btree_test.c:578:9: note: Shadowed declaration
+   bool correct = memtable_verify(cc, mt);
+        ^
+tests/functional/btree_test.c:696:15: note: Shadow variable
+         bool correct =
+              ^
+tests/functional/btree_test.c:718:15: style: Local variable 'correct' shadows outer variable [shadowVariable]
+         bool correct;
+              ^
+tests/functional/btree_test.c:578:9: note: Shadowed declaration
+   bool correct = memtable_verify(cc, mt);
+        ^
+tests/functional/btree_test.c:718:15: note: Shadow variable
+         bool correct;
+              ^
+tests/functional/btree_test.c:758:12: style: Local variable 'correct' shadows outer variable [shadowVariable]
+      bool correct = test_btree_lookup(cc,
+           ^
+tests/functional/btree_test.c:578:9: note: Shadowed declaration
+   bool correct = memtable_verify(cc, mt);
+        ^
+tests/functional/btree_test.c:758:12: note: Shadow variable
+      bool correct = test_btree_lookup(cc,
+           ^
+tests/functional/btree_test.c:847:23: style: Local variable 'rc' shadows outer variable [shadowVariable]
+      platform_status rc = btree_pack(&req);
+                      ^
+tests/functional/btree_test.c:819:20: note: Shadowed declaration
+   platform_status rc = STATUS_OK;
+                   ^
+tests/functional/btree_test.c:847:23: note: Shadow variable
+      platform_status rc = btree_pack(&req);
+                      ^
+tests/functional/btree_test.c:1406:14: style: Local variable 'max_key' shadows outer variable [shadowVariable]
+         key max_key = key_buffer_key(&pivot_key[pivot_no + 1]);
+             ^
+tests/functional/btree_test.c:1377:11: note: Shadowed declaration
+   uint64 max_key = (uint64)-1;
+          ^
+tests/functional/btree_test.c:1406:14: note: Shadow variable
+         key max_key = key_buffer_key(&pivot_key[pivot_no + 1]);
+             ^
+tests/functional/btree_test.c:390:57: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+   return async_lookup->ctxt_bitmap & (1UL << ctxt_idx) ? FALSE : TRUE;
+                                                        ^
+tests/functional/cache_test.c:1112:10: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+      rc = test_cache_async(ccp,
+         ^
+tests/functional/cache_test.c:1104:10: note: rc is assigned
+      rc = test_cache_async(ccp,
+         ^
+tests/functional/cache_test.c:1112:10: note: rc is overwritten
+      rc = test_cache_async(ccp,
+         ^
+tests/functional/cache_test.c:932:16: style: Local variable 'i' shadows outer variable [shadowVariable]
+   for (uint32 i = 0; i < extents_to_allocate; i++) {
+               ^
+tests/functional/cache_test.c:839:12: note: Shadowed declaration
+   uint32  i;
+           ^
+tests/functional/cache_test.c:932:16: note: Shadow variable
+   for (uint32 i = 0; i < extents_to_allocate; i++) {
+               ^
+tests/functional/filter_test.c:133:57: error: There is an unknown macro here somewhere. Configuration is required. If FRACTION_FMT is a macro then please configure it. [unknownMacro]
+      "routing filter basic test: false positive rate " FRACTION_FMT(1, 4) "\n",
+                                                        ^
+tests/functional/io_apis_test.c:576:22: style: Variable 'end_addr' is assigned a value that is never used. [unreadVariable]
+   uint64 end_addr   = io_test_param->end_addr;
+                     ^
+tests/functional/splinter_test.h:92:10: warning: The address of local variable 'config_argv' might be accessed at non-zero index. [objectIndex]
+         config_set_mib("tree-size", cfg, tree_size)
+         ^
+tests/functional/splinter_test.c:2667:63: note: Address of variable taken here.
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.c:2667:63: note: Calling function 'test_config_parse', 4th argument '&config_argv' value is lifetime=config_argv
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.h:92:10: note: The address of local variable 'config_argv' might be accessed at non-zero index.
+         config_set_mib("tree-size", cfg, tree_size)
+         ^
+tests/functional/splinter_test.h:92:10: warning: The address of local variable 'config_argv' might be accessed at non-zero index. [objectIndex]
+         config_set_mib("tree-size", cfg, tree_size)
+         ^
+tests/functional/splinter_test.c:2667:63: note: Address of variable taken here.
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.c:2667:63: note: Calling function 'test_config_parse', 4th argument '&config_argv' value is lifetime=config_argv
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.h:92:10: note: Assuming condition is false
+         config_set_mib("tree-size", cfg, tree_size)
+         ^
+tests/functional/splinter_test.h:92:10: note: The address of local variable 'config_argv' might be accessed at non-zero index.
+         config_set_mib("tree-size", cfg, tree_size)
+         ^
+tests/functional/splinter_test.h:97:10: warning: The address of local variable 'config_argv' might be accessed at non-zero index. [objectIndex]
+         config_set_gib("tree-size", cfg, tree_size)
+         ^
+tests/functional/splinter_test.c:2667:63: note: Address of variable taken here.
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.c:2667:63: note: Calling function 'test_config_parse', 4th argument '&config_argv' value is lifetime=config_argv
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.h:97:10: note: The address of local variable 'config_argv' might be accessed at non-zero index.
+         config_set_gib("tree-size", cfg, tree_size)
+         ^
+tests/functional/splinter_test.h:97:10: warning: The address of local variable 'config_argv' might be accessed at non-zero index. [objectIndex]
+         config_set_gib("tree-size", cfg, tree_size)
+         ^
+tests/functional/splinter_test.c:2667:63: note: Address of variable taken here.
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.c:2667:63: note: Calling function 'test_config_parse', 4th argument '&config_argv' value is lifetime=config_argv
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.h:97:10: note: Assuming condition is false
+         config_set_gib("tree-size", cfg, tree_size)
+         ^
+tests/functional/splinter_test.h:97:10: note: The address of local variable 'config_argv' might be accessed at non-zero index.
+         config_set_gib("tree-size", cfg, tree_size)
+         ^
+tests/functional/splinter_test.h:102:10: warning: The address of local variable 'config_argv' might be accessed at non-zero index. [objectIndex]
+         config_set_string("key-type", temp_cfg, key_type)
+         ^
+tests/functional/splinter_test.c:2667:63: note: Address of variable taken here.
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.c:2667:63: note: Calling function 'test_config_parse', 4th argument '&config_argv' value is lifetime=config_argv
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.h:102:10: note: The address of local variable 'config_argv' might be accessed at non-zero index.
+         config_set_string("key-type", temp_cfg, key_type)
+         ^
+tests/functional/splinter_test.h:102:10: warning: The address of local variable 'config_argv' might be accessed at non-zero index. [objectIndex]
+         config_set_string("key-type", temp_cfg, key_type)
+         ^
+tests/functional/splinter_test.c:2667:63: note: Address of variable taken here.
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.c:2667:63: note: Calling function 'test_config_parse', 4th argument '&config_argv' value is lifetime=config_argv
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.h:102:10: note: Assuming condition is false
+         config_set_string("key-type", temp_cfg, key_type)
+         ^
+tests/functional/splinter_test.h:102:10: note: The address of local variable 'config_argv' might be accessed at non-zero index.
+         config_set_string("key-type", temp_cfg, key_type)
+         ^
+tests/functional/splinter_test.h:121:10: warning: The address of local variable 'config_argv' might be accessed at non-zero index. [objectIndex]
+         config_set_uint64("semiseq-freq", cfg, semiseq_freq)
+         ^
+tests/functional/splinter_test.c:2667:63: note: Address of variable taken here.
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.c:2667:63: note: Calling function 'test_config_parse', 4th argument '&config_argv' value is lifetime=config_argv
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.h:121:10: note: The address of local variable 'config_argv' might be accessed at non-zero index.
+         config_set_uint64("semiseq-freq", cfg, semiseq_freq)
+         ^
+tests/functional/splinter_test.h:121:10: warning: The address of local variable 'config_argv' might be accessed at non-zero index. [objectIndex]
+         config_set_uint64("semiseq-freq", cfg, semiseq_freq)
+         ^
+tests/functional/splinter_test.c:2667:63: note: Address of variable taken here.
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.c:2667:63: note: Calling function 'test_config_parse', 4th argument '&config_argv' value is lifetime=config_argv
+   rc = test_config_parse(test_cfg, num_tables, &config_argc, &config_argv);
+                                                              ^
+tests/functional/splinter_test.h:121:10: note: Assuming condition is false
+         config_set_uint64("semiseq-freq", cfg, semiseq_freq)
+         ^
+tests/functional/splinter_test.h:121:10: note: The address of local variable 'config_argv' might be accessed at non-zero index.
+         config_set_uint64("semiseq-freq", cfg, semiseq_freq)
+         ^
+tests/functional/splinter_test.c:2408:40: error: The address of local variable 'config_argv' is accessed at non-zero index. [objectIndex]
+      if (!try_string_to_uint32((*argv)[1], max_async_inflight)) {
+                                       ^
+tests/functional/splinter_test.c:2604:38: note: Address of variable taken here.
+   if (splinter_test_parse_perf_args(&config_argv,
+                                     ^
+tests/functional/splinter_test.c:2604:38: note: Calling function 'splinter_test_parse_perf_args', 1st argument '&config_argv' value is lifetime=config_argv
+   if (splinter_test_parse_perf_args(&config_argv,
+                                     ^
+tests/functional/splinter_test.c:2408:40: note: The address of local variable 'config_argv' is accessed at non-zero index.
+      if (!try_string_to_uint32((*argv)[1], max_async_inflight)) {
+                                       ^
+tests/functional/splinter_test.c:1524:32: style: Variable 'params[i].expected_found' is reassigned a value before the old one has been used. [redundantAssignment]
+      params[i].expected_found = TRUE;
+                               ^
+tests/functional/splinter_test.c:1520:32: note: params[i].expected_found is assigned
+      params[i].expected_found = TRUE;
+                               ^
+tests/functional/splinter_test.c:1524:32: note: params[i].expected_found is overwritten
+      params[i].expected_found = TRUE;
+                               ^
+tests/functional/splinter_test.c:1842:10: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+      rc = STATUS_OK;
+         ^
+tests/functional/splinter_test.c:1786:10: note: rc is assigned
+      rc = STATUS_OK;
+         ^
+tests/functional/splinter_test.c:1842:10: note: rc is overwritten
+      rc = STATUS_OK;
+         ^
+tests/functional/splinter_test.c:1898:10: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+      rc = STATUS_OK;
+         ^
+tests/functional/splinter_test.c:1842:10: note: rc is assigned
+      rc = STATUS_OK;
+         ^
+tests/functional/splinter_test.c:1898:10: note: rc is overwritten
+      rc = STATUS_OK;
+         ^
+tests/functional/splinter_test.c:2282:7: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+   rc = STATUS_OK;
+      ^
+tests/functional/splinter_test.c:2240:7: note: rc is assigned
+   rc = STATUS_OK;
+      ^
+tests/functional/splinter_test.c:2282:7: note: rc is overwritten
+   rc = STATUS_OK;
+      ^
+tests/functional/splinter_test.c:2330:7: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+   rc = STATUS_OK;
+      ^
+tests/functional/splinter_test.c:2282:7: note: rc is assigned
+   rc = STATUS_OK;
+      ^
+tests/functional/splinter_test.c:2330:7: note: rc is overwritten
+   rc = STATUS_OK;
+      ^
+tests/functional/splinter_test.c:685:25: style: Variable 'num_ops' is assigned a value that is never used. [unreadVariable]
+   uint64       num_ops = 0;
+                        ^
+tests/functional/test_functionality.c:640:37: style:inconclusive: Function 'test_functionality' argument 8 names different: declaration 'ts' definition 'state'. [funcArgNamesDifferent]
+                   task_system     *state,
+                                    ^
+tests/functional/test_functionality.h:17:37: note: Function 'test_functionality' argument 8 names different: declaration 'ts' definition 'state'.
+                   task_system     *ts,
+                                    ^
+tests/functional/test_functionality.c:640:37: note: Function 'test_functionality' argument 8 names different: declaration 'ts' definition 'state'.
+                   task_system     *state,
+                                    ^
+tests/functional/ycsb_test.c:729:34: style: Variable 'phases[0].params' is reassigned a value before the old one has been used. [redundantAssignment]
+   phases[0].params              = &params[0];
+                                 ^
+tests/functional/ycsb_test.c:723:21: note: phases[0].params is assigned
+   phases[0].params = params;
+                    ^
+tests/functional/ycsb_test.c:729:34: note: phases[0].params is overwritten
+   phases[0].params              = &params[0];
+                                 ^
+tests/functional/ycsb_test.c:486:14: style: The scope of the variable 'num_read' can be reduced. [variableScope]
+      size_t num_read;
+             ^
+tests/functional/ycsb_test.c:487:14: style: The scope of the variable 'num_written' can be reduced. [variableScope]
+      size_t num_written;
+             ^
+tests/functional/ycsb_test.c:749:14: style: Local variable 'num_lines' shadows outer variable [shadowVariable]
+      uint64 num_lines = req->end_line - req->start_line;
+             ^
+tests/functional/ycsb_test.c:696:11: note: Shadowed declaration
+   uint64 num_lines = strtoull(argv[4], NULL, 0);
+          ^
+tests/functional/ycsb_test.c:749:14: note: Shadow variable
+      uint64 num_lines = req->end_line - req->start_line;
+             ^
+tests/test_common.c:47:12: style: The scope of the variable 'data_str' can be reduced. [variableScope]
+      char data_str[128];
+           ^
+tests/unit/btree_stress_test.c:243:10: style: Condition '0<nkvs' is always true [knownConditionTrueFalse]
+   if (0 < nkvs && !packed_root_addr) {
+         ^
+tests/unit/btree_stress_test.c:187:19: note: Assignment 'nkvs=1000000', assigned value is 1000000
+   int nkvs     = 1000000;
+                  ^
+tests/unit/btree_stress_test.c:243:10: note: Condition '0<nkvs' is always true
+   if (0 < nkvs && !packed_root_addr) {
+         ^
+tests/unit/btree_test.c:202:7: style: Variable 'rv' is assigned a value that is never used. [unreadVariable]
+   rv = FALSE;
+      ^
+tests/unit/btree_test.c:213:11: style: Variable 'cmp_rv' is assigned a value that is never used. [unreadVariable]
+   cmp_rv = 0;
+          ^
+tests/unit/btree_test.c:298:16: style: Variable 'rv' is assigned a value that is never used. [unreadVariable]
+   bool rv     = FALSE;
+               ^
+tests/unit/btree_test.c:299:16: style: Variable 'cmp_rv' is assigned a value that is never used. [unreadVariable]
+   int  cmp_rv = 0;
+               ^
+tests/unit/btree_test.c:365:12: style: Variable 'rv' is assigned a value that is never used. [unreadVariable]
+   bool rv = FALSE;
+           ^
+tests/unit/main.c:655:44: style:inconclusive: Function 'print_test_suite_names' argument 1 names different: declaration 'tbegin' definition 'test_begin'. [funcArgNamesDifferent]
+print_test_suite_names(const struct ctest *test_begin,
+                                           ^
+tests/unit/main.c:109:44: note: Function 'print_test_suite_names' argument 1 names different: declaration 'tbegin' definition 'test_begin'.
+print_test_suite_names(const struct ctest *tbegin,
+                                           ^
+tests/unit/main.c:655:44: note: Function 'print_test_suite_names' argument 1 names different: declaration 'tbegin' definition 'test_begin'.
+print_test_suite_names(const struct ctest *test_begin,
+                                           ^
+tests/unit/main.c:656:44: style:inconclusive: Function 'print_test_suite_names' argument 2 names different: declaration 'tend' definition 'test_end'. [funcArgNamesDifferent]
+                       const struct ctest *test_end,
+                                           ^
+tests/unit/main.c:110:44: note: Function 'print_test_suite_names' argument 2 names different: declaration 'tend' definition 'test_end'.
+                       const struct ctest *tend,
+                                           ^
+tests/unit/main.c:656:44: note: Function 'print_test_suite_names' argument 2 names different: declaration 'tend' definition 'test_end'.
+                       const struct ctest *test_end,
+                                           ^
+tests/unit/main.c:846:25: style:inconclusive: Function 'assert_data' argument 1 names different: declaration 'exp' definition 'vexp'. [funcArgNamesDifferent]
+assert_data(const void *vexp,
+                        ^
+tests/unit/ctest.h:220:25: note: Function 'assert_data' argument 1 names different: declaration 'exp' definition 'vexp'.
+assert_data(const void *exp,
+                        ^
+tests/unit/main.c:846:25: note: Function 'assert_data' argument 1 names different: declaration 'exp' definition 'vexp'.
+assert_data(const void *vexp,
+                        ^
+tests/unit/main.c:848:25: style:inconclusive: Function 'assert_data' argument 3 names different: declaration 'real' definition 'vreal'. [funcArgNamesDifferent]
+            const void *vreal,
+                        ^
+tests/unit/ctest.h:222:25: note: Function 'assert_data' argument 3 names different: declaration 'real' definition 'vreal'.
+            const void *real,
+                        ^
+tests/unit/main.c:848:25: note: Function 'assert_data' argument 3 names different: declaration 'real' definition 'vreal'.
+            const void *vreal,
+                        ^
+tests/unit/misc_test.c:89:10: style: Local variable 'assert_str' shadows outer function [shadowFunction]
+   char *assert_str = platform_log_stream_to_string(&stream);
+         ^
+tests/unit/ctest.h:209:1: note: Shadowed declaration
+assert_str(const char *exp, const char *real, const char *caller, int line);
+^
+tests/unit/misc_test.c:89:10: note: Shadow variable
+   char *assert_str = platform_log_stream_to_string(&stream);
+         ^
+tests/unit/misc_test.c:125:10: style: Local variable 'assert_str' shadows outer function [shadowFunction]
+   char *assert_str = platform_log_stream_to_string(&stream);
+         ^
+tests/unit/ctest.h:209:1: note: Shadowed declaration
+assert_str(const char *exp, const char *real, const char *caller, int line);
+^
+tests/unit/misc_test.c:125:10: note: Shadow variable
+   char *assert_str = platform_log_stream_to_string(&stream);
+         ^
+tests/unit/misc_test.c:159:10: style: Local variable 'assert_str' shadows outer function [shadowFunction]
+   char *assert_str = platform_log_stream_to_string(&stream);
+         ^
+tests/unit/ctest.h:209:1: note: Shadowed declaration
+assert_str(const char *exp, const char *real, const char *caller, int line);
+^
+tests/unit/misc_test.c:159:10: note: Shadow variable
+   char *assert_str = platform_log_stream_to_string(&stream);
+         ^
+tests/unit/misc_test.c:266:13: style: Local variable 'outstr' shadows outer variable [shadowVariable]
+      char *outstr = size_to_str(size_str, sizeof(size_str), size);
+            ^
+tests/unit/misc_test.c:218:11: note: Shadowed declaration
+   char  *outstr = size_to_str(size_str, sizeof(size_str), size);
+          ^
+tests/unit/misc_test.c:266:13: note: Shadow variable
+      char *outstr = size_to_str(size_str, sizeof(size_str), size);
+            ^
+tests/unit/splinter_test.c:184:7: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+   rc = test_init_task_system(data->hid, data->io, &data->tasks, &data->task_cfg);
+      ^
+tests/unit/splinter_test.c:181:7: note: rc is assigned
+   rc = io_handle_init(data->io, &data->io_cfg, data->hh, data->hid);
+      ^
+tests/unit/splinter_test.c:184:7: note: rc is overwritten
+   rc = test_init_task_system(data->hid, data->io, &data->tasks, &data->task_cfg);
+      ^
+tests/unit/splinter_test.c:125:57: style: Same value in both branches of ternary operator. [duplicateValueTernary]
+   uint8 num_caches     = (cache_per_table ? num_tables : 1);
+                                                        ^
+tests/unit/splinterdb_quick_test.c:510:14: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+   rc        = splinterdb_iterator_init(data->kvsb, &it, start_key);
+             ^
+tests/unit/splinterdb_quick_test.c:497:20: note: rc is assigned
+   rc              = splinterdb_iterator_init(data->kvsb, &it, start_key);
+                   ^
+tests/unit/splinterdb_quick_test.c:510:14: note: rc is overwritten
+   rc        = splinterdb_iterator_init(data->kvsb, &it, start_key);
+             ^
+tests/unit/splinterdb_quick_test.c:719:7: style: Variable 'rc' is reassigned a value before the old one has been used. [redundantAssignment]
+   rc = splinterdb_lookup(data->kvsb, user_key, &result);
+      ^
+tests/unit/splinterdb_quick_test.c:714:7: note: rc is assigned
+   rc = splinterdb_insert(data->kvsb, user_key, msg_slice);
+      ^
+tests/unit/splinterdb_quick_test.c:719:7: note: rc is overwritten
+   rc = splinterdb_lookup(data->kvsb, user_key, &result);
+      ^
+tests/unit/splinterdb_quick_test.c:739:18: style: Variable 'msg.ref_count' is reassigned a value before the old one has been used. [redundantAssignment]
+   msg.ref_count = -6;
+                 ^
+tests/unit/splinterdb_quick_test.c:729:18: note: msg.ref_count is assigned
+   msg.ref_count = 5;
+                 ^
+tests/unit/splinterdb_quick_test.c:739:18: note: msg.ref_count is overwritten
+   msg.ref_count = -6;
+                 ^
+tests/unit/splinterdb_quick_test.c:749:18: style: Variable 'msg.ref_count' is reassigned a value before the old one has been used. [redundantAssignment]
+   msg.ref_count = 12;
+                 ^
+tests/unit/splinterdb_quick_test.c:739:18: note: msg.ref_count is assigned
+   msg.ref_count = -6;
+                 ^
+tests/unit/splinterdb_quick_test.c:749:18: note: msg.ref_count is overwritten
+   msg.ref_count = 12;
+                 ^
+tests/unit/splinterdb_stress_test.c:213:8: style: The scope of the variable 'rc' can be reduced. [variableScope]
+   int rc = 0;
+       ^
+tests/unit/splinterdb_stress_test.c:216:7: style: Unsigned expression 'result' can't be negative so it is unnecessary to test it. [unsignedPositive]
+      ASSERT_TRUE(result >= 0);
+      ^
+tests/unit/splinterdb_stress_test.c:219:7: style: Unsigned expression 'result' can't be negative so it is unnecessary to test it. [unsignedPositive]
+      ASSERT_TRUE(result >= 0);
+      ^
+tests/unit/splinterdb_stress_test.c:213:11: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+   int rc = 0;
+          ^
+tests/unit/task_system_test.c:316:32: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+   platform_status rc          = STATUS_OK;
+                               ^
+examples/splinterdb_custom_ipv4_addr_sortcmp_example.c:341:65: error: Null pointer dereference: from_key [ctunullpointer]
+   printf("Iterate through all the keys starting from '%s':\n", from_key);
+                                                                ^
+examples/splinterdb_custom_ipv4_addr_sortcmp_example.c:167:19: note: Calling function do_iterate_from, 2nd argument is null
+   do_iterate_from(spl_handle, NULL);
+                  ^
+examples/splinterdb_custom_ipv4_addr_sortcmp_example.c:341:65: note: Dereferencing argument from_key that is null
+   printf("Iterate through all the keys starting from '%s':\n", from_key);
+                                                                ^
+examples/splinterdb_iterators_example.c:140:65: error: Null pointer dereference: from_key [ctunullpointer]
+   printf("Iterate through all the keys starting from '%s':\n", from_key);
+                                                                ^
+examples/splinterdb_iterators_example.c:87:19: note: Calling function do_iterate_from, 2nd argument is null
+   do_iterate_from(spl_handle, NULL);
+                  ^
+examples/splinterdb_iterators_example.c:140:65: note: Dereferencing argument from_key that is null
+   printf("Iterate through all the keys starting from '%s':\n", from_key);
+                                                                ^
+tests/functional/avlTree.c:902:0: style: The function 'AvlTreeIter_Advance' is never used. [unusedFunction]
+
+^
+tests/functional/avlTree.c:926:0: style: The function 'AvlTreeIter_GetCurrent' is never used. [unusedFunction]
+
+^
+tests/functional/avlTree.c:847:0: style: The function 'AvlTreeIter_Init' is never used. [unusedFunction]
+
+^
+tests/functional/avlTree.c:444:0: style: The function 'AvlTree_Delete' is never used. [unusedFunction]
+
+^
+tests/functional/avlTree.c:514:0: style: The function 'AvlTree_FindNodeGeq' is never used. [unusedFunction]
+
+^
+tests/functional/avlTree.c:553:0: style: The function 'AvlTree_FindNodeLeq' is never used. [unusedFunction]
+
+^
+tests/functional/avlTree.c:106:0: style: The function 'AvlTree_IsUnlinked' is never used. [unusedFunction]
+
+^
+tests/functional/avlTree.c:621:0: style: The function 'AvlTree_Max' is never used. [unusedFunction]
+
+^
+tests/functional/avlTree.c:592:0: style: The function 'AvlTree_Min' is never used. [unusedFunction]
+
+^
+tests/functional/avlTree.c:685:0: style: The function 'AvlTree_Predecessor' is never used. [unusedFunction]
+
+^
+tests/functional/avlTree.c:650:0: style: The function 'AvlTree_Successor' is never used. [unusedFunction]
+
+^
+src/PackedArray.c:469:0: style: The function 'PackedArray_set' is never used. [unusedFunction]
+
+^
+src/PackedArray.c:541:0: style: The function '__PackedArray_log2' is never used. [unusedFunction]
+
+^
+tests/unit/main.c:846:0: style: The function 'assert_data' is never used. [unusedFunction]
+
+^
+tests/unit/main.c:992:0: style: The function 'assert_dbl_far' is never used. [unusedFunction]
+
+^
+tests/unit/main.c:968:0: style: The function 'assert_dbl_near' is never used. [unusedFunction]
+
+^
+tests/unit/main.c:897:0: style: The function 'assert_equal_u' is never used. [unusedFunction]
+
+^
+tests/unit/main.c:1050:0: style: The function 'assert_fail' is never used. [unusedFunction]
+
+^
+tests/unit/main.c:951:0: style: The function 'assert_interval' is never used. [unusedFunction]
+
+^
+tests/unit/main.c:923:0: style: The function 'assert_not_equal_u' is never used. [unusedFunction]
+
+^
+tests/unit/main.c:931:0: style: The function 'assert_strnequal' is never used. [unusedFunction]
+
+^
+tests/unit/main.c:833:0: style: The function 'assert_wstr' is never used. [unusedFunction]
+
+^
+src/btree.c:1236:0: style: The function 'btree_block_dec_ref' is never used. [unusedFunction]
+
+^
+src/btree.c:3068:0: style: The function 'btree_count_in_range_by_iterator' is never used. [unusedFunction]
+
+^
+src/btree.c:1198:0: style: The function 'btree_inc_ref_range' is never used. [unusedFunction]
+
+^
+src/btree.c:2066:0: style: The function 'btree_lookup_and_merge' is never used. [unusedFunction]
+
+^
+src/btree.c:2331:0: style: The function 'btree_lookup_and_merge_async' is never used. [unusedFunction]
+
+^
+src/btree.c:3551:0: style: The function 'btree_print_lookup' is never used. [unusedFunction]
+
+^
+src/btree.c:3398:0: style: The function 'btree_space_use_in_range' is never used. [unusedFunction]
+
+^
+src/btree.c:1243:0: style: The function 'btree_unblock_dec_ref' is never used. [unusedFunction]
+
+^
+tests/functional/test_functionality.c:608:0: style: The function 'cmp_ptrs' is never used. [unusedFunction]
+
+^
+src/util.c:363:0: style: The function 'debug_hex_dump_slice' is never used. [unusedFunction]
+
+^
+src/shard_log.c:323:0: style: The function 'log_create' is never used. [unusedFunction]
+
+^
+src/memtable.c:91:0: style: The function 'memtable_begin_lookup' is never used. [unusedFunction]
+
+^
+src/memtable.c:103:0: style: The function 'memtable_block_lookups' is never used. [unusedFunction]
+
+^
+src/memtable.c:352:0: style: The function 'memtable_config_init' is never used. [unusedFunction]
+
+^
+src/memtable.c:248:0: style: The function 'memtable_dec_ref_maybe_recycle' is never used. [unusedFunction]
+
+^
+src/memtable.c:97:0: style: The function 'memtable_end_lookup' is never used. [unusedFunction]
+
+^
+src/memtable.c:266:0: style: The function 'memtable_force_finalize' is never used. [unusedFunction]
+
+^
+src/memtable.c:29:0: style: The function 'memtable_is_empty' is never used. [unusedFunction]
+
+^
+src/memtable.c:111:0: style: The function 'memtable_unblock_lookups' is never used. [unusedFunction]
+
+^
+src/data_internal.c:22:0: style: The function 'merge_accumulator_to_slice' is never used. [unusedFunction]
+
+^
+src/merge.c:629:0: style: The function 'merge_iterator_print' is never used. [unusedFunction]
+
+^
+src/rc_allocator.c:653:0: style: The function 'rc_allocator_extent_size' is never used. [unusedFunction]
+
+^
+src/rc_allocator.c:659:0: style: The function 'rc_allocator_page_size' is never used. [unusedFunction]
+
+^
+src/routing_filter.c:321:0: style: The function 'routing_filter_add' is never used. [unusedFunction]
+
+^
+src/routing_filter.c:674:0: style: The function 'routing_filter_estimate_unique_fp' is never used. [unusedFunction]
+
+^
+src/routing_filter.c:1196:0: style: The function 'routing_filter_estimate_unique_keys' is never used. [unusedFunction]
+
+^
+src/routing_filter.c:979:0: style: The function 'routing_filter_lookup_async' is never used. [unusedFunction]
+
+^
+src/routing_filter.c:1312:0: style: The function 'routing_filter_print' is never used. [unusedFunction]
+
+^
+src/routing_filter.c:1212:0: style: The function 'routing_filter_verify' is never used. [unusedFunction]
+
+^
+src/routing_filter.c:1158:0: style: The function 'routing_filter_zap' is never used. [unusedFunction]
+
+^
+src/routing_filter.c:125:0: style: The function 'routing_set_bit' is never used. [unusedFunction]
+
+^
+src/shard_log.c:474:0: style: The function 'shard_log_print' is never used. [unusedFunction]
+
+^
+src/splinterdb.c:27:0: style: The function 'splinterdb_get_version' is never used. [unusedFunction]
+
+^
+src/splinterdb.c:684:0: style: The function 'splinterdb_stats_print_insertion' is never used. [unusedFunction]
+
+^
+src/splinterdb.c:690:0: style: The function 'splinterdb_stats_print_lookup' is never used. [unusedFunction]
+
+^
+src/splinterdb.c:696:0: style: The function 'splinterdb_stats_reset' is never used. [unusedFunction]
+
+^
+src/task.c:607:0: style: The function 'task_enqueue' is never used. [unusedFunction]
+
+^
+src/task.c:735:0: style: The function 'task_perform_all' is never used. [unusedFunction]
+
+^
+src/task.c:780:0: style: The function 'task_perform_until_quiescent' is never used. [unusedFunction]
+
+^
+src/task.c:1015:0: style: The function 'task_print_stats' is never used. [unusedFunction]
+
+^
+src/util.c:272:0: style: The function 'try_string_to_int16' is never used. [unusedFunction]
+
+^
+src/util.c:260:0: style: The function 'try_string_to_int32' is never used. [unusedFunction]
+
+^
+src/util.c:284:0: style: The function 'try_string_to_int8' is never used. [unusedFunction]
+
+^
+src/util.c:236:0: style: The function 'try_string_to_uint16' is never used. [unusedFunction]
+
+^
+tests/functional/ycsb_test.c:781:0: style: The function 'unload_ycsb_logs' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
